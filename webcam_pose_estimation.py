@@ -8,6 +8,7 @@ import time
 import numpy as np
 from pythonosc import udp_client
 from PIL import Image, ImageTk
+import os
 
 # Modern, sleeker color scheme
 BG_COLOR = "#1a1a1a"
@@ -45,6 +46,10 @@ class PoseEstimationApp:
         self.root.title("YOLOv8 Pose Estimation")
         self.root.geometry("800x600")
         self.root.configure(bg=BG_COLOR)
+        
+        # Set window icon
+        if os.path.exists('icon.ico'):
+            self.root.iconbitmap('icon.ico')
         
         # Initialize variables
         self.model = None

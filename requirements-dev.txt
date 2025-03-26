@@ -1,0 +1,4 @@
+pyinstaller
+black
+flake8
+pytest 
